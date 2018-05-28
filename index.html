@@ -6,31 +6,55 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <style>
+	h1 {
+	    text-shadow: 3px 2px black;
+	}
+	h2 {
+	    text-shadow: 3px 2px black;
+	}
 body,h1 {font-family: "Raleway", sans-serif}
 body, html {height: 100%}
 .bgimg {
-	background-image: url("tinavegaphotography6.jpg");
+	background-image: url("tinavegaphotography6a.jpg");
     min-height: 100%;
     background-position: center;
     background-size: cover;
 }
 </style>
 <body>
-
 <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-  <div class="w3-display-topleft w3-padding-large w3-xlarge">
-    campen
-  </div>
   <div class="w3-display-middle">
     <h1 class="w3-jumbo w3-animate-top">The Campen Family</h1>
-    <hr class="w3-border-grey" style="margin:auto;width:40%">
-    <p class="w3-xxlarge w3-center"><a href="Christmas2017.pdf">Christmas 2017 Newsletter</a></p>
-	<p class="w3-large w3-center"><a href="page2.html">Christmas Newsletter Archives</a></p>
-  </div>
-  <div class="w3-display-bottomleft w3-padding-large">
-    © Campen Family</a>
-  </div>
+  <p class="w3-xxlarge w3-center"><a href="Christmas2017.pdf">Current Family Newsletter</a></p>
+  	<p class="w3-large w3-center"><a href="page2.html">Christmas Newsletter Archives</a></p></div>
+   <div class="w3-display-bottomright w3-padding-large">© Campen Family</a></div> 
+<!-- Sidebar -->
+<div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-black w3-large" onclick="w3_close()">Close &times;</button>
+  <a href="Christmas2017.pdf" class="w3-bar-item w3-black w3-button">Current Newsletter</a>
+  <a href="page2.html" class="w3-bar-item w3-black w3-button">Archived Letters</a>
 </div>
 
+<!-- Page Content -->
+
+<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+<div>
+  <button class="w3-button w3-black w3-xxlarge" onclick="w3_open()">&#9776;</button>
+
+</div>
+     
+<script>
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+     
 </body>
 </html>
+
